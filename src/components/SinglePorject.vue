@@ -1,5 +1,5 @@
 <template>
-  <div class="project">
+  <div class="project" :class="{ complete: project.complete}">
     <div class="actions">
         <h3 @click="showDetails = !showDetails">{{ project.title }}</h3>
         <div class="icons">
@@ -72,5 +72,13 @@ export default {
   }
   .material-icons:hover {
     color: #777;
+  }
+
+  /* completed projects */
+  .project.complete {
+    border-left: 4px solid #00ce89;
+  }
+  .project.complete .tick {
+    color: #00ce89;
   }
 </style>
