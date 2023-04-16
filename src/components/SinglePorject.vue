@@ -29,6 +29,8 @@ export default {
         deleteProject() {
             fetch(this.uri, 
             {method: 'Delete'})
+            .then(() => this.$emit('delete', this.project.id))
+            .catch(err => console.log(err.message))
         }
     }
 
