@@ -2,9 +2,9 @@
 
 - using options API
 - This project included
-- - Add Project
-- - Edit Project
-- - Delete Project
+    - Add Project
+    - Edit Project
+    - Delete Project
 
 
 # install json server
