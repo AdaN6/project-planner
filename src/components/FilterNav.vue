@@ -1,12 +1,12 @@
 <template>
   <nav class="filter-nav">
-    <button @click="updateFilter('all')">
+    <button @click="updateFilter('all')" :class="{active: current === 'all'}">
         View All
     </button>
-    <button @click="updateFilter('done')">
+    <button @click="updateFilter('done')" :class="{active: current === 'done'}">
         Done
     </button>
-    <button @click="updateFilter('toDo')">
+    <button @click="updateFilter('toDo')" :class="{active: current === 'toDo'}">
         To do
     </button>
   </nav>
@@ -14,6 +14,7 @@
 
 <script>
 export default {
+    props: ['current'],
     methods: {
         updateFilter(by) {
             this.$emit('filterChange', by)
