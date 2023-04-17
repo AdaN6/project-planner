@@ -23,6 +23,7 @@ export default {
       current: 'all'
     }
   },
+  // mounted life cycle hook
   mounted() {
     fetch('http://localhost:3000/projects')
     .then(res => res.json())
