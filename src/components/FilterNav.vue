@@ -18,8 +18,10 @@ export default {
     methods: {
         updateFilter(by) {
             this.$emit('filterChange', by)
+            
         }
-    }
+    },
+    
 }
 </script>
 
